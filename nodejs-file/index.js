@@ -1,3 +1,16 @@
-const addBooks = require("./app");
+const { getAllBooks, addBooks, getABook, deleteAbook } = require("./app");
 
-addBooks("akash-batash", "Tanvir Rifat");
+// get all books line by line:
+getAllBooks();
+
+// add books:
+addBooks("alo tumi keno eka", "Tanvir Rifat");
+
+// get a specific book:
+getABook("akash-batash");
+
+// delete A specific book:
+
+deleteAbook("akash-batash");
+
+getAllBooks();
