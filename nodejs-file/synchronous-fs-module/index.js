@@ -14,3 +14,7 @@ getABook("akash-batash");
 deleteAbook("akash-batash");
 
 getAllBooks();
+
+console.log(
+  "ami porei print hobo karon app.js e use korse synchronous fs module"
+);
