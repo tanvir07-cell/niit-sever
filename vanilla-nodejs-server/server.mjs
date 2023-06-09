@@ -59,6 +59,30 @@ const server = createServer(async (req, res) => {
       );
     }
   }
+
+  if (req.method === "GET" && req.url.match(/\/api\/v1\/users\/([0-9])/)) {
+    const id = req.url.split("/")[4];
+    // now find the specific user:
+    const user = users.find((user) => user.id === parseInt(id));
+
+    if (!user) {
+      res.writeHead(404, { "content-type": "application/json" });
+      res.end(
+        JSON.stringify({
+          status: false,
+          message: "User is not found so that's why not get",
+        })
+      );
+    } else {
+      res.writeHead(200, { "content-type": "application/json" });
+      res.end(
+        JSON.stringify({
+          status: true,
+          message: `${user.name} retrieved successfully`,
+        })
+      );
+    }
+  }
 });
 
 server.listen(PORT, () => {
