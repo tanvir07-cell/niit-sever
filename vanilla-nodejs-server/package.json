@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon server.mjs",
+=======
+    "start":"nodemon server.mjs",
+>>>>>>> 392a1dc40d679c180e0a908645fc83c8c4f9c525
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
+<<<<<<< HEAD
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.2.0"
   }
+=======
+  "license": "ISC"
+>>>>>>> 392a1dc40d679c180e0a908645fc83c8c4f9c525
 }
